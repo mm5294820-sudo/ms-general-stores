@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ms Genral Store Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="loader-container" style="display:none">
+        <div class="loader"></div>
+    </div>
+
+    <div class="login-sy">
+        <div class="loader-container" style="display:none">
+            <div class="loader"></div>
+        </div>
+        <div class="logo">
+            <h1 class="head-sp">
+                MS
+            </h1>
+
+            <h2 class="head">
+                Genral Store
+            </h2>
+        </div>
+        <div class="login">
+            <form>
+                <h1>Login</h1>
+                <div class="name">
+                    <i class="fa-solid fa-envelope icon"></i>
+                    <input type="text" id="name" placeholder="Enter user name" required>
+                </div>
+
+                <div class="password">
+                    <i class="fa-solid fa-lock icon"></i>
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                </div>
+                <button type="button" onclick="Login()">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        async function Login() {
+            const name = document.getElementById('name').value;
+            const password = document.getElementById('password').value;
+
+            if (name === "" && password === "") {
+                alert("please enter username or password");
+                return;
+            }
+            if (name === "") {
+                alert("please enter username");
+                return;
+            }
+            if (password === "") {
+                alert("please enter your password");
+                return;
+            }
+
+
+            try {
+                const response = await fetch('login.json');
+                const users = await response.json();
+
+                // Check if user exists
+                const user = users.find(u => u.name === name);
+                const isPasswordValid = users.some(u => u.password === password);
+
+                if (user && user.password === password) {
+                    document.querySelector('.loader-container').style.display = 'flex';
+                    document.querySelector('.login-sy').style.display = 'none';
+                    setTimeout(() => {
+                        window.location.href = "record enter.html";
+                    }, 2000);
+                } else if (user && user.password !== password) {
+                    alert("Invalid password");
+                } else if (!user && isPasswordValid) {
+                    alert("Invalid username");
+                } else {
+                    alert("Invalid username or password");
+                }
+            } catch (error) {
+                console.error(error);
+                alert("Error: Please make sure you are running this on a local server (like Live Server) to load login.json");
+            }
+        }
+    </script>
+</body>
+
+</html>

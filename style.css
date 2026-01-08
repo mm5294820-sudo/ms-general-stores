@@ -1,0 +1,602 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin-left: 0.5rem;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 98vh;
+  width: 20rem;
+  background-color: #92b7f7;
+}
+
+.logo {
+  margin-top: 3rem;
+}
+
+.logo h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 20rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: black;
+}
+
+ul li:hover {
+  background-color: #bfd1f1;
+}
+
+.logout {
+  display: flex;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.headi {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logout h3 {
+  color: black;
+}
+
+.Heading {
+  height: 15rem;
+  width: 112.5rem;
+  background-color: #92b7f7;
+  margin-left: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1px;
+  margin-top: 10px;
+}
+
+.Heading h2 {
+  font-size: 4rem;
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Record Item */
+
+.entryname {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 12px;
+  gap: 21px;
+  width: 111rem;
+  padding-left: 17px;
+}
+
+#sno {
+  height: 2.5rem;
+  background-color: #92b7f7;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sno h2,
+#name h2,
+#invoice h2,
+#bprice h2,
+#qty-1 h2,
+#sprice h2,
+#tamou h2,
+#sqty h2,
+#tqty h2 {
+  font-size: 1.3rem;
+}
+
+#name {
+  height: 2.5rem;
+  background-color: #92b7f7;
+  width: 23rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#invoice {
+  height: 2.5rem;
+  background-color: #92b7f7;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+#bprice {
+  height: 2.5rem;
+  background-color: #92b7f7;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#qty-1 {
+  height: 2.5rem;
+  background-color: #92b7f7;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sprice {
+  height: 2.5rem;
+  background-color: #92b7f7;
+  width: 7.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tamou {
+  height: 2.5rem;
+  background-color: #92b7f7;
+  width: 9.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tqty {
+  height: 2.5rem;
+  background-color: #92b7f7;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sqty {
+  height: 2.5rem;
+  background-color: #92b7f7;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entry-data {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  height: 37rem;
+  width: 112rem;
+  margin-top: 15px;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+.input-record {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 12px;
+  gap: 21px;
+  width: 103rem;
+  height: 4rem;
+  background-color: #92b7f7;
+  margin-left: 0.5rem;
+  padding-left: 18px;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+}
+
+#s-no {
+  height: 2rem;
+  width: 4rem;
+  border: none;
+  font-size: 1.3rem;
+  padding-left: 16px;
+  background: #ffff;
+  color: black;
+}
+
+#Product-name {
+  height: 2rem;
+  width: 23rem;
+  border: none;
+  font-size: 1.3rem;
+  background: #ffff;
+  padding-left: 12px;
+}
+
+#invoice-no {
+  height: 2rem;
+  width: 12rem;
+  border: none;
+  font-size: 1.3rem;
+  background: #ffff;
+  padding-left: 12px;
+  color: black;
+}
+
+#b-price {
+  height: 2rem;
+  width: 10rem;
+  border: none;
+  font-size: 1.3rem;
+  background: #ffff;
+  padding-left: 12px;
+  color: black;
+}
+
+#qty {
+  height: 2rem;
+  width: 6rem;
+  border: none;
+  font-size: 1.3rem;
+  background: #ffff;
+  padding-left: 12px;
+  color: black;
+}
+
+#s-qty {
+  height: 2rem;
+  width: 8rem;
+  border: none;
+  font-size: 1.3rem;
+  background: #ffff;
+  padding-left: 12px;
+  color: black;
+}
+
+#t-qty {
+  height: 2rem;
+  width: 7rem;
+  border: none;
+  font-size: 1.3rem;
+  background: #ffff;
+  padding-left: 12px;
+  color: black;
+}
+
+#s-price {
+  height: 2rem;
+  width: 7.5rem;
+  border: none;
+  font-size: 1.3rem;
+  background: #ffff;
+  padding-left: 12px;
+  color: black;
+}
+
+#t-amount {
+  height: 2rem;
+  width: 9.5rem;
+  border: none;
+  font-size: 1.3rem;
+  background: #ffff;
+  padding-left: 12px;
+  color: black;
+}
+
+.fa-circle-xmark {
+  color: red;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6.5rem;
+  margin-top: 10px;
+  width: 112rem;
+}
+
+.totsls {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #92b7f7;
+  height: 4rem;
+  width: 70rem;
+  border-radius: 0.5rem;
+}
+.amount {
+  height: 2rem;
+  width: 9.5rem;
+  background-color: #fff;
+  font-size: 1.5rem;
+  color: black;
+  padding-left: 15px;
+}
+
+.t-item {
+  height: 2rem;
+  width: 6rem;
+  background: #ffff;
+  font-size: 1.5rem;
+  color: black;
+  padding-left: 15px;
+}
+
+.label {
+  font-size: 2rem;
+}
+
+/* record entry */
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 47rem;
+  width: 112rem;
+  margin-top: 10px;
+}
+
+:root {
+  --blue: #92b7f7;
+}
+
+form {
+  background-color: #92b7f7;
+  height: 28rem;
+  width: 50rem;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  border-radius: 0.5rem;
+  justify-items: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+label {
+  font-size: 25px;
+}
+
+.s-no {
+  height: 2rem;
+  width: 5rem;
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.productname {
+  height: 2rem;
+  width: 23rem;
+  font-size: 20px;
+  padding-left: 15px;
+  color: black;
+}
+.invoice-no {
+  height: 2rem;
+  width: 11rem;
+  font-size: 20px;
+  padding-left: 15px;
+  color: black;
+}
+.b-price {
+  height: 2rem;
+  width: 8rem;
+  font-size: 20px;
+  padding-left: 15px;
+  color: black;
+}
+.s-price {
+  height: 2rem;
+  width: 7rem;
+  font-size: 20px;
+  padding-left: 15px;
+  color: black;
+}
+.qty {
+  height: 2rem;
+  width: 5rem;
+  font-size: 20px;
+  padding-left: 15px;
+  color: black;
+}
+
+.addd-butt {
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 10rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+/* sales */
+
+.datewagare {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 4rem;
+  width: 105rem;
+  border: 2px solid black;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+.datewagare div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.datewagare h3 {
+  font-size: 1.5rem;
+}
+
+#date {
+  height: 2rem;
+  width: 8rem;
+  font-size: 1rem;
+  padding-left: 5px;
+}
+
+#time {
+  height: 2rem;
+  width: 8rem;
+  font-size: 1rem;
+  padding-left: 5px;
+}
+
+#cus-name {
+  height: 2rem;
+  width: 13rem;
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+
+#amou {
+  height: 2rem;
+  width: 9.5rem;
+  font-size: 1.5rem;
+  padding-left: 5px;
+}
+
+input {
+  background-color: #f8f6f6;
+  color: black;
+  border-radius: 0.5rem;
+}
+
+.add-card,
+.print {
+  height: 2.5rem;
+  width: 6rem;
+  background-color: var(--blue);
+  color: black;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #92b7f7;
+  border: none;
+}
+
+.add-card:hover,
+.print:hover {
+  background-color: #acc7f7;
+}
+
+.sales-na {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 112rem;
+  margin-top: 1rem;
+}
+
+#Dis {
+  background-color: var(--blue);
+  height: 2.5rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border: none;
+}
+
+.entry-datas{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  height: 35rem;
+  width: 112rem;
+  margin-top: 1rem;
+  overflow-y: scroll;
+}
+
+.slaes-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 90rem;
+  height: 3rem;
+}
+
+.input-records{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 84rem;
+  height: 3rem;
+  background-color: var(--blue);
+  padding-left: 3.5rem;
+  flex-shrink: 0;
+  border-radius: .5rem;
+  margin-top: 0.8rem
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+#dis {
+  background-color: white;
+  height: 2rem;
+  width: 6rem;
+  color: black;
+  font-size: 1.3rem;
+  padding-left: 12px;
+  border: none;
+}
